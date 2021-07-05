@@ -36,6 +36,8 @@
       <root url="jar://$PROJECT_DIR$/lib/spring-webmvc-5.2.3.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/commons-dbcp-1.4-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

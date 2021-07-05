@@ -9,12 +9,28 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 @Service
+
 public class UserServiceimpl implements UserService {
-    @Autowired
+   @Autowired
     private UserDao userDao;
 
     @Override
     public User login(String username, String password) {
-        return null;
+        return userDao.queryUserByUsernamePassword(username,password);
+    }
+
+    @Override
+    public void saveUser(User user) {
+        userDao.saveUser(user);
+    }
+
+    @Override
+    public void deleteUser(User user) {
+        userDao.DeleteUser(user);
+    }
+
+    @Override
+    public User findUser(int userid) {
+        return userDao.FindUser(userid);
     }
 }

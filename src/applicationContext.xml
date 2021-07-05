@@ -56,7 +56,7 @@
         <!--注入数据源-->
         <property name="dataSource" ref="dataSource" />
         <!--配置别名:把entity所有类名取名为类名-->
-         <property name="typeAliasesPackage" value="com.yxq.entity" />
+         <property name="typeAliasesPackage" value="com.xtq.entity" />
         <!--注册mapper-->
         <property name="mapperLocations">
               <list>
@@ -69,7 +69,7 @@
     <!--5.配置扫描器: 将接口实现加入到ioc容器中-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
          <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-         <property name="basePackage" value="com.yxq.dao"/>
+         <property name="basePackage" value="com.xtq.dao"/>
     </bean>
 
     <!--6.配置事务管理器-->

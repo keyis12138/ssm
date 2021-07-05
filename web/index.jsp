@@ -11,7 +11,7 @@
     <title>$Title$</title>
   </head>
   <body>
-  HELLO
+  <jsp:forward page="/user/toLogin"></jsp:forward>
   </body>
 </html>
 
