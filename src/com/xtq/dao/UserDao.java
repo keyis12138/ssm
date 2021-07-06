@@ -13,9 +13,9 @@ public interface UserDao {
 
     public User queryUserByUsername(@Param("username") String username);
 
-    public int saveUser(@Param("user") User user);
+    public int saveUser(User user);
 
-    public void DeleteUser(@Param("user") User user);
+    public void DeleteUser(User user);
 
     public User FindUser(@Param("id") int userid);
 }

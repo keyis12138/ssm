@@ -46,7 +46,7 @@
         <ol >
             <%if(username==null||username.equals("null")){%>
             <li><a href="login.jsp">请登录</a></li>
-            <li><a href="register.jsp">注册</a></li>
+            <li><a href="../../../../git/javaweb_homewor-temp/src/main/webapp/register.jsp">注册</a></li>
             <%}else{%>
             <li><a href="#">欢迎<%=username%></a></li>
             <a href="OrderServlet?username=<%=username%>&action=find">我的订单</a>

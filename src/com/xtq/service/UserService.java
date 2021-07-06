@@ -10,4 +10,6 @@ public interface UserService {
     public void deleteUser(User user);
 
     public User findUser(int userid);
+
+    public User checkname(String username);
 }

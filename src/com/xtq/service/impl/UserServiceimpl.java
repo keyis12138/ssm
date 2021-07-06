@@ -33,4 +33,9 @@ public class UserServiceimpl implements UserService {
     public User findUser(int userid) {
         return userDao.FindUser(userid);
     }
+
+    @Override
+    public User checkname(String username) {
+        return userDao.queryUserByUsername(username);
+    }
 }

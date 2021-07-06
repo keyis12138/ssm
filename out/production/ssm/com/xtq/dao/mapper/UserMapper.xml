@@ -4,4 +4,20 @@
     <select id="queryUserByUsernamePassword" resultType="User" >
         select * from t_user where username = #{username} and password = #{password}
     </select>
+
+    <select id="getUser" resultType="User">
+        select * from t_user
+    </select>
+    <select id="queryUserByUsername" resultType="User">
+        select * from t_user where username = #{username}
+    </select>
+    <insert id="saveUser" useGeneratedKeys="true" parameterType="User">
+        insert into t_user (username,password,email,type) values(#{username},#{password},#{email},#{type})
+    </insert>
+    <select id="FindUser" resultType="User">
+        select * from t_user where id=#{id}
+    </select>
+    <update id="DeleteUser" parameterType="User">
+        delete from t_user where id=#{id}
+    </update>
 </mapper>

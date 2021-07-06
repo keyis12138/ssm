@@ -13,6 +13,18 @@
     <meta charset="UTF-8">
     <title>登录</title>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/login&register.css">
+    <script src="${pageContext.request.contextPath}/js/jquery-1.7.2.js" type="text/javascript">
+    </script>
+    <script>
+        $(function () {
+            $("#reg").click(
+                function toRegister(){
+                    window.location.href="${pageContext.request.contextPath}/user/register";
+                }
+            )
+        })
+
+    </script>
 </head>
 <body>
 <div id="login">
