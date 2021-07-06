@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Controller
 @RequestMapping("/user")
 public class UserController {
@@ -46,10 +49,17 @@ public class UserController {
     }
 
     @RequestMapping(value = "/doLogin",method = RequestMethod.POST)
-    public String doLogin(@RequestParam("username") String username,@RequestParam("password") String password){
-        logger.debug("username"+username+",password="+password);
+    @ResponseBody
+    public Map<String,Object> doLogin(@RequestParam("username") String username, @RequestParam("password") String password){
         User user = userService.login(username,password);
-        logger.debug(user.toString());
-        return "loginsuccess";
+        Map<String,Object>result = new HashMap<>();
+        if(user!=null){
+            result.put("result","true");
+            result.put("role",user.getType());
+            return result;
+        }else{
+            result.put("result","false");
+            return result;
+        }
     }
 }
